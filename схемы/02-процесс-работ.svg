@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="960" height="550" preserveAspectRatio="xMinYMin meet" viewBox="0 0 960 550" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="960" height="550"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-550)" style="clip-path: url(#clip)">
+		<g transform="">
+			<rect x="78" y="458" width="870" height="83" rx="8" ry="8" style="stroke: rgb(81%,86%,88%); stroke-linecap: butt; stroke-width: 1; fill: rgb(93%,95%,96%); fill-rule: evenodd;"/>
+			<text x="12" y="494" style="font-family: Case-Bold; font-size: 29px;fill: rgb(7%,41%,43%); stroke:none;" transform="translate(0,988) scale(1,-1)">01</text>
+			<text x="96" y="509" style="font-family: Case-Bold; font-size: 23px;fill: rgb(9%,18%,27%); stroke:none;" transform="translate(0,1018) scale(1,-1)">Список волны и связанные задачи</text>
+			<text x="96" y="477" style="font-family: Case; font-size: 19px;fill: rgb(9%,18%,27%); stroke:none;" transform="translate(0,954) scale(1,-1)">Аналитик сверяет сведения и связи записей.</text>
+			<path d="M 506,458 L 506,438 Z" style="stroke: rgb(7%,41%,43%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="500 444, 512 444, 506 436" style="stroke: rgb(7%,41%,43%); stroke-linecap: butt; stroke-width: 1; fill: rgb(7%,41%,43%); fill-rule: evenodd;"/>
+			<rect x="78" y="350" width="870" height="83" rx="8" ry="8" style="stroke: rgb(81%,86%,88%); stroke-linecap: butt; stroke-width: 1; fill: rgb(93%,95%,96%); fill-rule: evenodd;"/>
+			<text x="12" y="386" style="font-family: Case-Bold; font-size: 29px;fill: rgb(7%,41%,43%); stroke:none;" transform="translate(0,772) scale(1,-1)">02</text>
+			<text x="96" y="401" style="font-family: Case-Bold; font-size: 23px;fill: rgb(9%,18%,27%); stroke:none;" transform="translate(0,802) scale(1,-1)">Удалённая установка или ручные работы</text>
+			<text x="96" y="369" style="font-family: Case; font-size: 19px;fill: rgb(9%,18%,27%); stroke:none;" transform="translate(0,738) scale(1,-1)">Автоматизация устанавливает удалённо; инженер — вручную.</text>
+			<path d="M 506,350 L 506,330 Z" style="stroke: rgb(7%,41%,43%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="500 336, 512 336, 506 328" style="stroke: rgb(7%,41%,43%); stroke-linecap: butt; stroke-width: 1; fill: rgb(7%,41%,43%); fill-rule: evenodd;"/>
+			<rect x="78" y="242" width="870" height="83" rx="8" ry="8" style="stroke: rgb(81%,86%,88%); stroke-linecap: butt; stroke-width: 1; fill: rgb(93%,95%,96%); fill-rule: evenodd;"/>
+			<text x="12" y="278" style="font-family: Case-Bold; font-size: 29px;fill: rgb(7%,41%,43%); stroke:none;" transform="translate(0,556) scale(1,-1)">03</text>
+			<text x="96" y="293" style="font-family: Case-Bold; font-size: 23px;fill: rgb(9%,18%,27%); stroke:none;" transform="translate(0,586) scale(1,-1)">Подтверждение установленной Astra</text>
+			<text x="96" y="261" style="font-family: Case; font-size: 19px;fill: rgb(9%,18%,27%); stroke:none;" transform="translate(0,522) scale(1,-1)">Фиксируются результат, источник и время, а не отправка задания.</text>
+			<path d="M 506,242 L 506,222 Z" style="stroke: rgb(7%,41%,43%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="500 228, 512 228, 506 220" style="stroke: rgb(7%,41%,43%); stroke-linecap: butt; stroke-width: 1; fill: rgb(7%,41%,43%); fill-rule: evenodd;"/>
+			<rect x="78" y="134" width="870" height="83" rx="8" ry="8" style="stroke: rgb(81%,86%,88%); stroke-linecap: butt; stroke-width: 1; fill: rgb(93%,95%,96%); fill-rule: evenodd;"/>
+			<text x="12" y="170" style="font-family: Case-Bold; font-size: 29px;fill: rgb(7%,41%,43%); stroke:none;" transform="translate(0,340) scale(1,-1)">04</text>
+			<text x="96" y="185" style="font-family: Case-Bold; font-size: 23px;fill: rgb(9%,18%,27%); stroke:none;" transform="translate(0,370) scale(1,-1)">Учёт сохранённой Windows</text>
+			<text x="96" y="153" style="font-family: Case; font-size: 19px;fill: rgb(9%,18%,27%); stroke:none;" transform="translate(0,306) scale(1,-1)">При двойной загрузке остаётся отдельная задача вывода Windows.</text>
+			<path d="M 506,134 L 506,114 Z" style="stroke: rgb(7%,41%,43%); stroke-linecap: butt; stroke-width: 2;"/>
+			<polygon points="500 120, 512 120, 506 112" style="stroke: rgb(7%,41%,43%); stroke-linecap: butt; stroke-width: 1; fill: rgb(7%,41%,43%); fill-rule: evenodd;"/>
+			<rect x="78" y="26" width="870" height="83" rx="8" ry="8" style="stroke: rgb(81%,86%,88%); stroke-linecap: butt; stroke-width: 1; fill: rgb(93%,95%,96%); fill-rule: evenodd;"/>
+			<text x="12" y="62" style="font-family: Case-Bold; font-size: 29px;fill: rgb(7%,41%,43%); stroke:none;" transform="translate(0,124) scale(1,-1)">05</text>
+			<text x="96" y="77" style="font-family: Case-Bold; font-size: 23px;fill: rgb(9%,18%,27%); stroke:none;" transform="translate(0,154) scale(1,-1)">Контроль оставшихся обязательств</text>
+			<text x="96" y="45" style="font-family: Case; font-size: 19px;fill: rgb(9%,18%,27%); stroke:none;" transform="translate(0,90) scale(1,-1)">Инциденты — отдельно. Вывод Windows — по команде сопровождения ПО.</text>
+		</g>
+	</g>
+</svg>

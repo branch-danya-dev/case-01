@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg
+  PUBLIC '-//W3C//DTD SVG 1.0//EN'
+  'http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd'>
+<svg width="960" height="385" preserveAspectRatio="xMinYMin meet" viewBox="0 0 960 385" xmlns="http://www.w3.org/2000/svg" version="1.0" fill-rule="evenodd" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<title>...</title>
+	<desc>...</desc>
+	<clipPath id="clip">
+		<rect x="0" y="0" width="960" height="385"/>
+	</clipPath>
+	<g id="group" transform="scale(1,-1) translate(0,-385)" style="clip-path: url(#clip)">
+		<g transform="">
+			<text x="12" y="348" style="font-family: Case-Bold; font-size: 29px;fill: rgb(9%,18%,27%); stroke:none;" transform="translate(0,696) scale(1,-1)">Одно рабочее место — независимый учёт</text>
+			<rect x="12" y="51" width="296" height="265" rx="10" ry="10" style="stroke: rgb(81%,86%,88%); stroke-linecap: butt; stroke-width: 1; fill: rgb(93%,95%,96%); fill-rule: evenodd;"/>
+			<text x="28" y="281" style="font-family: Case-Bold; font-size: 22px;fill: rgb(7%,41%,43%); stroke:none;" transform="translate(0,562) scale(1,-1)">Конфигурация</text>
+			<text x="28" y="245" style="font-family: Case; font-size: 19px;fill: rgb(9%,18%,27%); stroke:none;" transform="translate(0,490) scale(1,-1)">Какие ОС установлены</text>
+			<text x="28" y="212" style="font-family: Case; font-size: 19px;fill: rgb(9%,18%,27%); stroke:none;" transform="translate(0,424) scale(1,-1)">Windows / Astra +</text>
+			<text x="28" y="186" style="font-family: Case; font-size: 19px;fill: rgb(9%,18%,27%); stroke:none;" transform="translate(0,372) scale(1,-1)">Windows / только Astra</text>
+			<text x="28" y="153" style="font-family: Case; font-size: 19px;fill: rgb(9%,18%,27%); stroke:none;" transform="translate(0,306) scale(1,-1)">Нет сведений —</text>
+			<text x="28" y="127" style="font-family: Case; font-size: 19px;fill: rgb(9%,18%,27%); stroke:none;" transform="translate(0,254) scale(1,-1)">отдельное состояние</text>
+			<rect x="332" y="51" width="296" height="265" rx="10" ry="10" style="stroke: rgb(81%,86%,88%); stroke-linecap: butt; stroke-width: 1; fill: rgb(93%,95%,96%); fill-rule: evenodd;"/>
+			<text x="348" y="281" style="font-family: Case-Bold; font-size: 22px;fill: rgb(7%,41%,43%); stroke:none;" transform="translate(0,562) scale(1,-1)">Работы</text>
+			<text x="348" y="245" style="font-family: Case; font-size: 19px;fill: rgb(9%,18%,27%); stroke:none;" transform="translate(0,490) scale(1,-1)">Установка Astra</text>
+			<text x="348" y="212" style="font-family: Case; font-size: 19px;fill: rgb(9%,18%,27%); stroke:none;" transform="translate(0,424) scale(1,-1)">Отдельный вывод</text>
+			<text x="348" y="186" style="font-family: Case; font-size: 19px;fill: rgb(9%,18%,27%); stroke:none;" transform="translate(0,372) scale(1,-1)">Windows</text>
+			<text x="348" y="153" style="font-family: Case; font-size: 19px;fill: rgb(9%,18%,27%); stroke:none;" transform="translate(0,306) scale(1,-1)">Причина ожидания,</text>
+			<text x="348" y="127" style="font-family: Case; font-size: 19px;fill: rgb(9%,18%,27%); stroke:none;" transform="translate(0,254) scale(1,-1)">исполнитель и контроль</text>
+			<rect x="652" y="51" width="296" height="265" rx="10" ry="10" style="stroke: rgb(81%,86%,88%); stroke-linecap: butt; stroke-width: 1; fill: rgb(93%,95%,96%); fill-rule: evenodd;"/>
+			<text x="668" y="281" style="font-family: Case-Bold; font-size: 22px;fill: rgb(7%,41%,43%); stroke:none;" transform="translate(0,562) scale(1,-1)">Инциденты</text>
+			<text x="668" y="245" style="font-family: Case; font-size: 19px;fill: rgb(9%,18%,27%); stroke:none;" transform="translate(0,490) scale(1,-1)">Какая функция нарушена</text>
+			<text x="668" y="212" style="font-family: Case; font-size: 19px;fill: rgb(9%,18%,27%); stroke:none;" transform="translate(0,424) scale(1,-1)">Кто восстанавливает</text>
+			<text x="668" y="186" style="font-family: Case; font-size: 19px;fill: rgb(9%,18%,27%); stroke:none;" transform="translate(0,372) scale(1,-1)">работу</text>
+			<text x="668" y="153" style="font-family: Case; font-size: 19px;fill: rgb(9%,18%,27%); stroke:none;" transform="translate(0,306) scale(1,-1)">Собственные сроки и</text>
+			<text x="668" y="127" style="font-family: Case; font-size: 19px;fill: rgb(9%,18%,27%); stroke:none;" transform="translate(0,254) scale(1,-1)">подтверждение решения</text>
+			<text x="12" y="16" style="font-family: Case-Bold; font-size: 23px;fill: rgb(7%,41%,43%); stroke:none;" transform="translate(0,32) scale(1,-1)">Закрытие установки не закрывает другие обязательства.</text>
+		</g>
+	</g>
+</svg>
