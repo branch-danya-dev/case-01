@@ -1,0 +1,27 @@
+name: Проверка кейса
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    name: Проверка документов и примеров
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Получить файлы проверяемой версии
+        env:
+          REPOSITORY: ${{ github.repository }}
+          REVISION: ${{ github.sha }}
+        run: |
+          set -eu
+          git init .
+          git remote add origin "https://github.com/${REPOSITORY}.git"
+          git fetch --depth=1 origin "${REVISION}"
+          git checkout --detach FETCH_HEAD
+      - name: Проверить ссылки, состояния и расчёт сводки
+        run: python3 проверки/проверить.py
