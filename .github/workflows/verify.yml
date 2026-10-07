@@ -3,17 +3,18 @@ name: Проверка кейса
 on:
   push:
   pull_request:
+  workflow_dispatch:
 
 permissions:
   contents: read
 
 jobs:
   check:
-    name: Проверка документов и примеров
-    runs-on: ubuntu-latest
-    timeout-minutes: 5
+    name: Документы, примеры и представление
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
     steps:
-      - name: Получить файлы проверяемой версии
+      - name: Получить проверяемую версию
         env:
           REPOSITORY: ${{ github.repository }}
           REVISION: ${{ github.sha }}
@@ -23,5 +24,76 @@ jobs:
           git remote add origin "https://github.com/${REPOSITORY}.git"
           git fetch --depth=1 origin "${REVISION}"
           git checkout --detach FETCH_HEAD
-      - name: Проверить ссылки, состояния и расчёт сводки
-        run: python3 проверки/проверить.py
+      - name: Подготовить средства сборки
+        run: |
+          set -eu
+          if [ ! -f /usr/share/fonts/truetype/dejavu/DejaVuSans.ttf ]; then
+            sudo apt-get update
+            sudo apt-get install -y fonts-dejavu-core
+          fi
+          python3 -m venv "$RUNNER_TEMP/case-venv"
+          "$RUNNER_TEMP/case-venv/bin/pip" install -r представление/requirements.txt
+      - name: Проверить опубликованные файлы
+        run: |
+          if [ -f представление/проверка-сборки.json ]; then
+            "$RUNNER_TEMP/case-venv/bin/python" проверки/проверить-представление.py
+          elif [ "$GITHUB_REF" != "refs/heads/portfolio-presentation" ]; then
+            echo "Отсутствуют опубликованные файлы представления"
+            exit 1
+          fi
+      - name: Собрать представление и выполнить все проверки
+        run: |
+          set -eu
+          "$RUNNER_TEMP/case-venv/bin/python" представление/собрать.py
+          "$RUNNER_TEMP/case-venv/bin/python" проверки/проверить.py
+          "$RUNNER_TEMP/case-venv/bin/python" проверки/проверить-представление.py
+          if [ "$GITHUB_REF" = "refs/heads/main" ]; then
+            git diff --exit-code -- представление схемы
+          fi
+
+  publish:
+    name: Сохранить представление в рабочую ветку
+    needs: check
+    if: github.event_name == 'push' && github.ref == 'refs/heads/portfolio-presentation'
+    permissions:
+      contents: write
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Получить исходную версию
+        env:
+          REPOSITORY: ${{ github.repository }}
+          REVISION: ${{ github.sha }}
+        run: |
+          set -eu
+          git init .
+          git remote add origin "https://github.com/${REPOSITORY}.git"
+          git fetch --depth=1 origin "${REVISION}"
+          git checkout --detach FETCH_HEAD
+      - name: Собрать и проверить
+        run: |
+          set -eu
+          if [ ! -f /usr/share/fonts/truetype/dejavu/DejaVuSans.ttf ]; then
+            sudo apt-get update
+            sudo apt-get install -y fonts-dejavu-core
+          fi
+          python3 -m venv "$RUNNER_TEMP/case-venv"
+          "$RUNNER_TEMP/case-venv/bin/pip" install -r представление/requirements.txt
+          "$RUNNER_TEMP/case-venv/bin/python" представление/собрать.py
+          "$RUNNER_TEMP/case-venv/bin/python" проверки/проверить.py
+          "$RUNNER_TEMP/case-venv/bin/python" проверки/проверить-представление.py
+      - name: Сохранить только созданные материалы
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -eu
+          git add -- представление/кейс.md представление/Рогулин-Даниил-кейс-Astra-Linux.pdf представление/проверка-сборки.json схемы/01-модель-учёта.svg схемы/01-модель-учёта.png схемы/02-процесс-работ.svg схемы/02-процесс-работ.png
+          if git diff --cached --quiet; then
+            echo "Представление уже актуально"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Собрать PDF и изображения для отправки с резюме"
+          AUTH=$(printf 'x-access-token:%s' "$GH_TOKEN" | base64 -w0)
+          git -c "http.https://github.com/.extraheader=AUTHORIZATION: basic $AUTH" push origin HEAD:refs/heads/portfolio-presentation
